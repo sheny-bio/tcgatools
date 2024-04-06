@@ -1,0 +1,18 @@
+[package]
+name = "tcgatools"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = {version = "4.4.17", features = ["derive"]}
+xml-rs = "0.8"
+rayon = "1.10.0"
+polars = { version = "0.35.4", features = [
+    "lazy",
+    "fmt",
+    "diagonal_concat",
+    "serde"  # 用于序列化，排序
+] }
+
